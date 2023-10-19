@@ -9,7 +9,7 @@ layout: default
 <div class="container home">
   {% for project in site.projects %}
     <a href="{{ project.link }}" class="card {{ project.type }}">
-      <img src="/assets/img/projects/{{ project.title | slugify }}.png" alt="">
+      <img src="/assets/img/projects/{{ project.title | slugify }}.jpg" alt="">
       <div class="card-info">
         <h2>{{ project.title }}</h2>
         <h3>{{ project.author }}</h3>
