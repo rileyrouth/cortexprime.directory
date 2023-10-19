@@ -1,0 +1,31 @@
+.d8-wrap {
+    display: inline-block;
+    margin-inline: 2px;
+    vertical-align: middle;
+  }
+  
+  .d8 {
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .d8-inner {
+    line-height: 0;
+    svg {
+      width:auto;
+      height:22px;
+      path {
+        fill: #B00058;
+        stroke: #B00058;
+      }
+      text {
+        fill: white;
+        font-family:"Roboto", sans-serif;
+        font-size:2rem;
+      }
+    }
+  }
+  
+  

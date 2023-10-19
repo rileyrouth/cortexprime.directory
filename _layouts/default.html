@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1><a href="/">{{ site.title }}</a></h1>
+        <p><a href="/about">About</a></p>
+      </div>
+    </nav>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <div class="container">
+        <p>The Cortex Prime Directory is not produced by or endorsed by Dire Wolf Digital.</p>
+        <p>Made with {% include d8.html %} by <a href="https://rileyrouth.com">Riley Routh</a>.</p>
+       </div>
+    </footer>
+    <script src="assets/js/filter.js"></script>
+  </body>
+</html>
