@@ -67,12 +67,16 @@ nav, footer {
 }
 
 .home {
+  --cell-size: #{$card-image-height};
   display:grid;
-  grid-template-columns: repeat(auto-fit, $card-image-height);
+  grid-template-columns: repeat(auto-fit, var(--cell-size));
   justify-content: center;
   gap:1rem;
-  @media (max-width: 527px) {
-    display:block;
+  @media (max-width: 783px) {
+    --cell-size: calc(#{$card-image-height} / 1.5);
+  }
+  @media (max-width: 367px) {
+    --cell-size: calc(#{$card-image-height} / 2);
   }
 }
 
@@ -103,25 +107,13 @@ nav, footer {
     padding:.5rem 1rem;
     line-height:1;
     h2 {
-      font-size:1.35rem;
+      font-size:clamp(.9rem, 3vw, 1.35rem);
       font-weight:500;
     }
     h3 {
+      font-size:clamp(.8rem, 2vw, 1rem);
       text-transform: uppercase;
       font-weight:300;
-    }
-  }
-  @media (max-width: 527px) {
-    width:100%;
-    height: $card-image-height / 2;
-    margin-block:1rem;
-    &:not(&[hidden=""]) {
-      display:flex;
-    }
-    .card-info {
-      display:flex;
-      flex-direction:column;
-      justify-content: center;
     }
   }
 }
