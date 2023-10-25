@@ -114,8 +114,10 @@ nav, footer {
   @media (max-width: 527px) {
     width:100%;
     height: $card-image-height / 2;
-    display:flex;
     margin-block:1rem;
+    &:not(&[hidden=""]) {
+      display:flex;
+    }
     .card-info {
       display:flex;
       flex-direction:column;
